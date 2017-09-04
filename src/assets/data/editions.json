@@ -1,0 +1,14 @@
+[
+  {
+    "number": 1,
+    "name": "Mafalda",
+    "cover": "http://literatura.uol.com.br/wp-content/uploads/2017/02/mafalda.jpg",
+    "date": "2017-05-06"
+  },
+  {
+    "number": 2,
+    "name": "Calvin & Haroldo",
+    "cover": "https://i0.wp.com/notaterapia.com.br/wp-content/uploads/2015/11/calvin.jpg?fit=730%2C548",
+    "date": "2017-05-07"
+  }
+]

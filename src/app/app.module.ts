@@ -4,17 +4,22 @@ import { AppRouterModule } from './app-router.module'
 
 import { AppComponent } from './app.component';
 import { EditionDetailComponent } from './edition-detail.component';
+import { EditionService } from "./edition.service";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
-      AppComponent,
-      EditionDetailComponent,
+    AppComponent,
+    EditionDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRouterModule
+    AppRouterModule,
+    HttpModule,
   ],
-  providers: [],
+  providers: [
+    EditionService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

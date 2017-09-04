@@ -1,0 +1,20 @@
+#!/bin/bash
+
+declare -a files
+files=(src/assets/data/edition.*.json)
+pos=$(( ${#files[*]} - 1 ))
+last=${files[$pos]}
+
+function gen_file {
+    echo "["
+    for each in "${files[@]}"; do
+        jq "{ number: .number, name: .name, cover: .cover, date: .date }" $each
+        [[ "$each" != "$last" ]] && {
+            echo ","
+        }
+    done
+    echo "]"
+}
+
+cp $last src/assets/data/last_edition.json
+gen_file | jq '.' > src/assets/data/editions.json
