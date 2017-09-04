@@ -1,7 +1,9 @@
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/observable/of';
+import { Observable } from "rxjs/Observable";
 
 import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute, ParamMap } from '@angular/router'
+import { Router } from '@angular/router'
 
 import { EditionService } from './edition.service'
 import { Edition } from './edition'
@@ -14,13 +16,17 @@ export class EditionListComponent implements OnInit {
   editions: Edition[];
 
   constructor(
-    private route: ActivatedRoute,
+    private router: Router,
     private editionService: EditionService
   ) { }
 
   ngOnInit(): void {
-    this.route.paramMap
-      .switchMap((params: ParamMap) => this.editionService.getEditions())
-      .subscribe(editions => this.editions = editions);
-  }
+    this.editionService.getEditions()
+      .then(editions => this.editions = editions)
+    }
+    
+    goToDetail(edition:Edition) : void{
+      let link= [ '/edicao', edition.number ];
+      this.router.navigate(link)
+    }
 }

@@ -8,7 +8,7 @@ import { Edition } from './edition'
 
 @Component({
   selector: 'edition-detail',
-  templateUrl: "./edition-detail.component.html"
+  template: `<edition [edition]="edition"></edition>`
 })
 export class EditionDetailComponent implements OnInit {
   edition: Edition;

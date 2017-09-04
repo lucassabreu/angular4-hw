@@ -1,7 +1,7 @@
 <section class="edition-list">
-    <article class="edition-item" *ngFor="let edition of editions | async" 
+    <article class="edition-item" *ngFor="let edition of editions" 
         id="edition-{{edition.id}}">
-        <figure>
+        <figure (click)="goToDetail(edition)">
             <img src="{{edition.cover}}" />
             <figcaption>
                 <h1>#{{edition.number}} - {{edition.name}}</h1>

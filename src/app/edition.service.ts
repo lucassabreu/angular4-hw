@@ -19,10 +19,17 @@ export class EditionService {
       .catch(this.handleError)
   }
 
+  getLastEdition(): Promise<Edition> {
+    return this.http.get(`/assets/data/last_edition.json`)
+      .toPromise()
+      .then(response => response.json() as Edition)
+      .catch(this.handleError)
+  }
+
   getEditions(): Promise<Edition[]> {
     return this.http.get(`/assets/data/editions.json`)
       .toPromise()
-      .then(response => response.json().data as Edition[])
+      .then(response => response.json() as Edition[])
       .catch(this.handleError)
   }
 
