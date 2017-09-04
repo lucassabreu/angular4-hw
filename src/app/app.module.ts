@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { EditionDetailComponent } from './edition-detail.component';
 import { EditionService } from "./edition.service";
 import { HttpModule } from "@angular/http";
+import { EditionListComponent } from "./edition-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     EditionDetailComponent,
+    EditionListComponent,
   ],
   imports: [
     BrowserModule,
