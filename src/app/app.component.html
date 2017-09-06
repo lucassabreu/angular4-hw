@@ -1,6 +1,10 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/edicoes" routerLinkActive="active">Edições</a>
+<nav id="navbar">
+  <ul>
+    <li><a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a class="nav-link" routerLink="/edicoes" routerLinkActive="active">Edições</a></li>
+  </ul>
 </nav>
-<router-outlet></router-outlet>
+<div id="main">
+  <router-outlet></router-outlet>
+</div>
 

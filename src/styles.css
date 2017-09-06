@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+a:visited, a {
+  text-decoration: none;
+  color: #00f;
+}
+
+#navbar {
+  display: block;
+  background-color: #ccc;
+}
+
+#navbar ul {
+  width: 100%;
+  padding: .5rem;
+}
+
+#navbar ul li {
+  display: inline-block;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: .5rem .5rem;
+  text-decoration: none;
+  background-color: #ddd;
+}
+
+#main {
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+#main header {
+  background-color: #eee;
+  padding: .5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+#main header .date {
+  display: block;
+  text-align: right;
+  bottom: .5rem;
+  right: .5rem;
+}
+
+#main figure img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+#main .edition-list .edition-item {
+  background-color: #eee;
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+
+#main .edition-list .edition-item figcaption {
+  display: block;
+  padding: .5rem;
+}
+
+#main .edition-list .edition-item figcaption .date {
+  display: block;
+  text-align: right;
+}
+
+@media (min-width: 700px) {
+  #navbar ul, #main {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #main .edition figure img {
+    max-width: 90%;
+  }
+
+  #main .edition-list {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  #navbar ul, #main {
+    max-width: 900px;
+  }
+
+  #main .edition-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
