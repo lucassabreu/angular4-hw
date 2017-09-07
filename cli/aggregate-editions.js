@@ -1,3 +1,5 @@
+#!env node
+
 const fs = require('fs');
 
 const promesify = (func) => (...params) => new Promise (
