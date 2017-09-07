@@ -1,11 +1,11 @@
 <article class="edition" *ngIf="edition != null">
-    <header>
-        <h1>#{{edition.number}} - {{edition.name}}</h1>
-        <small class="date">{{edition.date | date : 'dd/MM/yyyy'}}</small>
-    </header>
-    <div class="content">
-        <figure *ngFor="let image of edition.images">
-            <img src="{{image}}" />
-        </figure>
-    </div>
+  <header>
+    <h1>#{{edition.number}} - {{edition.name}}</h1>
+    <small class="date">{{edition.date | date : 'dd/MM/yyyy'}}</small>
+  </header>
+  <div class="content">
+    <figure *ngFor="let image of edition.images">
+      <img src="{{image}}" />
+    </figure>
+  </div>
 </article>

@@ -1,12 +1,14 @@
 <section class="edition-list">
-    <article class="edition-item" *ngFor="let edition of editions" 
-        id="edition-{{edition.id}}">
-        <figure (click)="goToDetail(edition)">
-            <img src="{{edition.cover}}" />
-            <figcaption>
-                <h1>#{{edition.number}} - {{edition.name}}</h1>
-                <span class="date">{{edition.date | date : 'dd/MM/yyyy'}}</span>
-            </figcaption>
-        </figure>
-    </article>
+  <article class="edition-item" *ngFor="let edition of editions" 
+    id="edition-{{edition.id}}">
+    <figure (click)="goToDetail(edition)">
+      <div class="cover">
+        <img src="{{edition.cover}}" />
+      </div>
+      <figcaption>
+        <h1>#{{edition.number}} - {{edition.name}}</h1>
+        <span class="date">{{edition.date | date : 'dd/MM/yyyy'}}</span>
+      </figcaption>
+    </figure>
+  </article>
 </section>
