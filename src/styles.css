@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body, html {
+  background-color: #f0f1f2;
+}
+
 a:visited, a {
   text-decoration: none;
   color: #00f;
@@ -12,7 +16,7 @@ a:visited, a {
 
 #navbar {
   display: block;
-  background-color: #ccc;
+  background-color: #25d606;
 }
 
 #navbar ul {
@@ -26,9 +30,11 @@ a:visited, a {
 
 #navbar ul li a {
   display: block;
-  padding: .5rem .5rem;
+  padding: .25rem .5rem;
   text-decoration: none;
-  background-color: #ddd;
+  color: #1b9e04;
+  font-weight: bold;
+  background-color: #7de76b;
 }
 
 #main {
@@ -36,11 +42,19 @@ a:visited, a {
   padding-top: 2rem;
 }
 
-#main header {
-  background-color: #eee;
+#main .edition {
+  border: 3px solid #25d606;
+  border-radius: .25rem;
+  padding-bottom: 2rem;
+  background-color: #fff;
+}
+
+#main .edition header {
+  background-color: #25d606;
   padding: .5rem;
   position: relative;
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 #main header .date {
@@ -56,9 +70,17 @@ a:visited, a {
   max-width: 100%;
 }
 
+#main .edition-list .edition-item {
+  border: 3px solid #25d606;
+  border-radius: .5rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
 #main .edition-list .cover {
   width: 100%;
-  height: 200px;
+  height: 150px;
   display: flex;
   flow-direction: column;
 }
@@ -69,15 +91,11 @@ a:visited, a {
   vertical-align: center;
 }
 
-#main .edition-list .edition-item {
-  background-color: #eee;
-  padding: .5rem;
-  margin-bottom: 1rem;
-}
-
 #main .edition-list .edition-item figcaption {
   display: block;
   padding: .5rem;
+  color: #fff;
+  background-color: #25d606;
 }
 
 #main .edition-list .edition-item figcaption .date {
